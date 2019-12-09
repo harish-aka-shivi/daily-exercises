@@ -1,8 +1,7 @@
 module.exports = {
-    verbose: true,
-    reporters: [
-      'default',
-      './.submission-system/customJestReporter.js',
-    ],
-  };
-  
+  verbose: true,
+  reporters: [
+    'default',
+    './.submission-system/customJestReporter.js',
+  ],
+};
