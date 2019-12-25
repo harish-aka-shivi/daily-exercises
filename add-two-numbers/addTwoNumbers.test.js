@@ -1,7 +1,7 @@
 import { addTwoNumbers, ListNode } from './addTwoNumbers';
 
 describe('Solve add two numbers', () => {
-  it('solve the following test cases', () => {
+  it('add numbers of linked list', () => {
     const l1 = new ListNode(3);
     l1.next = new ListNode(4);
     l1.next.next = new ListNode(8);
