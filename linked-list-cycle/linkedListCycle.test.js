@@ -2,7 +2,6 @@ import { ListNode, hasCycle } from './linkedListCycle';
 
 describe('Find whether a Linked list has a cycle', () => {
   it('should give right result for following cases', () => {
-
     const head = new ListNode(1);
     const two = new ListNode(2);
     const three = new ListNode(3);
