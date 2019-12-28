@@ -10,7 +10,7 @@ const reverse = (x) => {
     return 0;
   }
   if (x / ((2 ** 31) - 1) > 1
-    || x / (-1 * (2 ** 31) > 1)) {
+    || x / (-1 * (2 ** 31)) > 1) {
     return 0;
   }
   let num = Math.abs(x);
