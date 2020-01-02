@@ -1,6 +1,6 @@
 import MyQueue from './queueUsingStack';
 
-describe('Shoud implement stack using queue', () => {
+describe('Should implement stack using queue', () => {
   it('pass the following test cases', () => {
     const queue = new MyQueue();
     queue.push(0);

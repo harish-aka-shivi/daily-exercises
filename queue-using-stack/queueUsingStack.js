@@ -52,21 +52,13 @@ MyQueue.prototype.push = function (x) {
    */
 MyQueue.prototype.pop = function () {
   const copyStack = new Stack();
-  // const length = this.stack.size();
-  // for (let i = 0; i < length; i++) {
-  //   copyStack.push(this.stack.pop());
-  // }
 
   this.stack.forEach(() => {
     copyStack.push(this.stack.pop());
   });
 
-
   const topItem = copyStack.pop();
 
-  // for (let i = 0; i < copyLength; i++) {
-  //   this.stack.push(copyStack.pop());
-  // }
   copyStack.forEach(() => {
     this.stack.push(copyStack.pop());
   });
@@ -79,22 +71,14 @@ MyQueue.prototype.pop = function () {
    */
 MyQueue.prototype.peek = function () {
   const copyStack = new Stack();
-  // const length = this.stack.size();
-  // for (let i = 0; i < length; i++) {
-  //   copyStack.push(this.stack.pop());
-  // }
   this.stack.forEach(() => {
     copyStack.push(this.stack.pop());
   });
   const topItem = copyStack.pop();
   copyStack.push(topItem);
-  // const copyLength = copyStack.size();
   copyStack.forEach(() => {
     this.stack.push(copyStack.pop());
   });
-  // for (let i = 0; i < copyLength; i++) {
-  //   this.stack.push(copyStack.pop());
-  // }
   return topItem;
 };
 
@@ -102,7 +86,7 @@ MyQueue.prototype.peek = function () {
    * Returns whether the queue is empty.
    * @return {boolean}
    */
-MyQueue.prototype.empty = function () {
+MyQueue.prototype.empty = function empty() {
   return this.stack.size() === 0;
 };
 
