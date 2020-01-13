@@ -17,5 +17,4 @@ describe('three sum', () => {
       [0, 0, 0].sort((a, b) => a - b),
     ].sort());
   });
-
 });
