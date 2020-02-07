@@ -11,5 +11,10 @@ describe('Solve minimum common interest problem', () => {
     const restaurant4 = ['KFC', 'Shogun', 'Burger King'];
 
     expect(findRestaurant(restaurant3, restaurant4)).toEqual(['Shogun']);
+
+    const restaurant5 = ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'];
+    const restaurant6 = ['KFC', 'Burger King', 'Tapioca Express', 'Shogun'];
+
+    expect(findRestaurant(restaurant5, restaurant6).length).toEqual(4);
   });
 });

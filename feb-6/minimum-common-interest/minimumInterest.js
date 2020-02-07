@@ -6,23 +6,26 @@
 const findRestaurant = (list1, list2) => {
   const mapList1 = {};
   let minSum = Infinity;
-  let minCommonInterest = '';
+  let minCommonInterest = [];
 
   list1.forEach((restaurant, index) => {
-    mapList1[restaurant] = `${index}`;
+    mapList1[restaurant] = index;
   });
 
   list2.forEach((restaurant, index) => {
     const commonInterest = mapList1[restaurant];
-    if (commonInterest) {
+    if (commonInterest !== 'undefined') {
       if (commonInterest + index < minSum) {
         minSum = commonInterest + index;
-        minCommonInterest = restaurant;
+        minCommonInterest = [restaurant];
+      } else if (commonInterest + index === minSum) {
+        minSum = commonInterest + index;
+        minCommonInterest.push(restaurant);
       }
     }
   });
 
-  return [minCommonInterest];
+  return minCommonInterest;
 };
 
 export default findRestaurant;
