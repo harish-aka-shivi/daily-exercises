@@ -84,10 +84,7 @@ Twitter.prototype.follow = function (followerId, followeeId) {
   }
 
   user.following = [...user.following, followeeId];
-  // user.following.push(followeeId);
-  // followeeUser.followers.push(followerId);
   followeeUser.followers = [...followeeUser.followers, followerId];
-  // user.newsFeed.push(followeeUser.tweets);
   user.newsFeed = [...user.newsFeed, ...followeeUser.tweets];
 };
 
