@@ -3,15 +3,12 @@
  * @return {number}
  */
 
-// const countCache = {};
-
 const findNestCount = (nums, startIndex) => {
   let count = 0;
   const hashMap = {};
   let reducedAcc = startIndex;
 
   while (!hashMap[reducedAcc]) {
-    // console.log(countCache, startIndex)
     count += 1;
     hashMap[reducedAcc] = true;
     reducedAcc = nums[reducedAcc];
@@ -19,7 +16,7 @@ const findNestCount = (nums, startIndex) => {
   return count;
 };
 
-const arrayNesting = function (nums) {
+const arrayNesting = (nums) => {
   let longestCount = Number.MIN_SAFE_INTEGER;
 
   nums.forEach((item) => {
